@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DELTA GREEN — Оперативный архив</title>
+<meta name="description" content="Интерактивная энциклопедия по Delta Green: правила, создание агента, бестиарий, гипергеометрия и материалы для куратора.">
+<meta name="theme-color" content="#0b0c09">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./assets/fonts/fonts.css">
+<link rel="stylesheet" href="./assets/css/dg.css">
+<link rel="stylesheet" href="./assets/css/official-sheet.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1.5 12S5.5 4.5 12 4.5 22.5 12 22.5 12 18.5 19.5 12 19.5 1.5 12 1.5 12Z" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2" stroke="currentColor" stroke-width="1"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m15.5 15.5 5.5 5.5" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-dice" viewBox="0 0 24 24"><path d="M12 2 21 7v10l-9 5-9-5V7l9-5Z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M3 7l9 5 9-5M12 12v10" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="7" cy="10" r="1" fill="currentColor"/><circle cx="17" cy="10" r="1" fill="currentColor"/><circle cx="12" cy="16" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-print" viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-2M6 14h12v7H6z" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 2h8l4 4v16H6z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M14 2v5h5M9 12h6M9 16h6" fill="none" stroke="currentColor" stroke-width="1.1"/></symbol>
+    <symbol id="i-skull" viewBox="0 0 24 24"><path d="M12 2c5 0 8 3.5 8 8 0 3-1.5 5-3 6v3H7v-3c-1.5-1-3-3-3-6 0-4.5 3-8 8-8Z" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="9" cy="10" r="1.5" fill="currentColor"/><circle cx="15" cy="10" r="1.5" fill="currentColor"/><path d="M10 16h4M10.5 19v2M13.5 19v2" stroke="currentColor" stroke-width="1"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+  </defs>
+</svg>
+
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menu-btn" aria-label="Открыть навигацию" aria-expanded="false">
+    <svg><use href="#i-menu"/></svg>
+  </button>
+  <a class="brand" href="#/" aria-label="На главную">
+    <svg class="brand-mark" aria-hidden="true"><use href="#i-eye"/></svg>
+    <span class="brand-text">
+      <b>DELTA GREEN</b>
+      <span>Оперативный архив · не для распространения</span>
+    </span>
+  </a>
+  <div class="classbar" aria-hidden="true">
+    <span class="cls red">СОВЕРШЕННО СЕКРЕТНО</span>
+    <span class="sep">//</span>
+    <span>ДОСТУП: КУРАТОР</span>
+    <span class="sep">//</span>
+    <span>ПРОТОКОЛ «НОЧЬ В ОПЕРЕ»</span>
+    <span class="sep">//</span>
+    <span class="rec"><i></i> ЗАПИСЬ</span>
+  </div>
+  <div class="top-actions">
+    <button class="icon-btn" id="search-btn" aria-label="Поиск по архиву">
+      <svg><use href="#i-search"/></svg><kbd>Ctrl K</kbd>
+    </button>
+    <button class="icon-btn" id="dice-btn" aria-label="Кости">
+      <svg><use href="#i-dice"/></svg><kbd>D</kbd>
+    </button>
+    <button class="icon-btn" id="print-btn" aria-label="Печать страницы">
+      <svg><use href="#i-print"/></svg>
+    </button>
+    <div class="clock">
+      <b id="clock">--:--</b>
+      <span class="mono">UTC+3 / MINSK</span>
+    </div>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar" aria-label="Навигация по архиву">
+    <div class="sb-title">Опись материалов // 2026</div>
+    <nav id="nav"></nav>
+    <div class="sidebar-foot">
+      <div><b>DELTA GREEN</b> · OPERATIONAL ARCHIVE</div>
+      <div>Сборка: локальный терминал</div>
+      <div>Данные сохраняются в этом браузере</div>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+    <div id="page" aria-live="polite"></div>
+    <div class="footer-note">
+      Неофициальный игровой справочник для личного использования куратора. Delta Green © The Delta Green Partnership.
+      Правила приведены в редакции «Справочника агента» и «Справочника куратора».
+    </div>
+  </main>
+
+  <aside class="rail" id="rail" aria-label="Содержание страницы"></aside>
+</div>
+
+<button class="dice-fab" id="dice-fab" aria-label="Открыть пульт костей">
+  <svg><use href="#i-dice"/></svg>
+  <span class="badge">d100</span>
+</button>
+
+<section class="dice-console" id="dice-console" aria-label="Пульт костей" aria-hidden="true">
+  <div class="dc-head">
+    <b>DG//RNG</b><span>полевой генератор</span>
+    <button class="dc-x" id="dc-x" aria-label="Закрыть">✕</button>
+  </div>
+  <div class="dc-body">
+    <div class="dc-result">
+      <div class="dc-value" id="dc-value">—</div>
+      <div class="dc-meta" id="dc-meta">ГОТОВ К БРОСКУ<br>ВВЕДИТЕ ФОРМУЛУ ИЛИ ЦЕЛЬ</div>
+    </div>
+    <div class="dc-toggle" id="dc-mode">
+      <button data-mode="expr" class="is-on">Формула</button>
+      <button data-mode="check">Проверка</button>
+      <button data-mode="san">Рассудок</button>
+    </div>
+    <div class="dc-row" id="dc-expr-row">
+      <input class="input" id="dc-expr" placeholder="1d100 / 2d6+2 / 1d4-1" autocomplete="off" spellcheck="false">
+      <button class="dc-btn" id="dc-roll">Бросок</button>
+    </div>
+    <div class="dc-row" id="dc-check-row" hidden>
+      <input class="input" id="dc-target" type="number" min="1" max="99" placeholder="Навык, %" style="flex:1">
+      <select class="input" id="dc-mod" style="flex:0 0 96px">
+        <option value="0">±0</option>
+        <option value="20">+20</option>
+        <option value="-20">−20</option>
+        <option value="-40">−40</option>
+      </select>
+      <button class="dc-btn" id="dc-check">Проверить</button>
+    </div>
+    <div class="dc-row" id="dc-san-row" hidden>
+      <input class="input" id="dc-san-cur" type="number" min="0" max="99" placeholder="Текущий ОР" style="flex:1">
+      <input class="input" id="dc-san-loss" placeholder="0/1d6" style="flex:0 0 90px">
+      <button class="dc-btn red" id="dc-san">SAN</button>
+    </div>
+    <div class="dc-quick">
+      <button data-d="d100">d100</button>
+      <button data-d="d20">d20</button>
+      <button data-d="d12">d12</button>
+      <button data-d="d10">d10</button>
+      <button data-d="d8">d8</button>
+      <button data-d="d6">d6</button>
+      <button data-d="d4">d4</button>
+      <button data-d="d3">d3</button>
+      <button data-d="2d6">2d6</button>
+      <button data-d="3d6">3d6</button>
+      <button data-d="4d6">4d6</button>
+      <button data-d="1d4-1">1d4−1</button>
+    </div>
+    <div class="dc-log" id="dc-log" aria-live="polite"></div>
+  </div>
+</section>
+
+<div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Поиск">
+  <div class="search-panel">
+    <div class="search-top">
+      <svg><use href="#i-search"/></svg>
+      <input class="search-input" id="search-input" placeholder="Найти правило, существо, профессию…" autocomplete="off" spellcheck="false">
+      <span class="search-hint">ESC</span>
+    </div>
+    <div class="search-results" id="search-results">
+      <div class="search-empty">Введите запрос. Поиск идёт по заголовкам и тексту всех досье.<br>Например: «потеря рассудка», «глубокий», «автомат», «связи».</div>
+    </div>
+    <div class="search-foot">
+      <span>↑↓ выбрать</span><span>Enter открыть</span><span>Ctrl+K закрыть</span>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="./assets/data/pages.js"></script>
+<script src="./assets/data/search.js"></script>
+<script src="./assets/data/bestiary.js"></script>
+<script src="./assets/data/professions.js"></script>
+<script src="./assets/data/sheet-images.js"></script>
+<script src="./assets/vendor/jspdf.umd.min.js"></script>
+<script src="./assets/js/dice.js"></script>
+<script src="./assets/js/app.js"></script>
+<script src="./assets/js/media.js"></script>
+<script src="./assets/js/official-sheet.js"></script>
+<script src="./assets/js/characters.js"></script>
+<script src="./assets/js/threats.js"></script>
+<script src="./assets/js/tools.js"></script>
+</body>
+</html>

@@ -1,0 +1,553 @@
+<!--META
+{
+  "title": "Ширма куратора",
+  "nav": "Ширма",
+  "subtitle": "Всё, что нужно под рукой, когда стол смотрит на вас и ждёт ответа.",
+  "kicker": "РАЗДЕЛ 10 · КУРАТОР",
+  "code": "DG-10-02",
+  "num": "10.2",
+  "group": "handler",
+  "order": 102,
+  "parent": "opera",
+  "summary": "Плотная шпаргалка: проверки, бой, рассудок, яды, болезни, огонь и падения.",
+  "tags": ["Ширма","Таблицы","Шпаргалка"]
+}
+META-->
+
+<p class="lede">Это не глава для чтения, а рабочая поверхность. Пять вкладок, минимум прозы, максимум чисел. Держите страницу открытой на втором экране или распечатайте: при печати интерфейс скрывается, таблицы остаются.</p>
+
+<div class="callout rule">
+  <span class="callout-t">Главное правило ширмы</span>
+  <p>Если ответ неочевиден и не критичен — не ищите таблицу. Назначьте шанс (20 / 40 / 60 / 80), попросите бросок и двигайтесь дальше. Таблицы нужны для напряжения, а не для юридической точности.</p>
+</div>
+
+<div class="tabs" data-tabs>
+  <div class="tablist">
+    <button class="tab is-on" data-tab="scr-checks">Проверки</button>
+    <button class="tab" data-tab="scr-combat">Бой</button>
+    <button class="tab" data-tab="scr-sanity">Рассудок</button>
+    <button class="tab" data-tab="scr-hazards">Опасности</button>
+    <button class="tab" data-tab="scr-ref">Шпаргалка</button>
+  </div>
+
+  <div class="tabpanel is-on" id="scr-checks">
+    <div class="screen-grid">
+      <div class="screen-card">
+        <h3>Когда бросок не нужен</h3>
+        <ul>
+          <li>Действие спокойное, безопасное и повторяемое.</li>
+          <li>У агента достаточно времени и инструментов.</li>
+          <li>Провал ничего не меняет и никого не ставит под угрозу.</li>
+          <li>Игрок описал план, который просто работает.</li>
+        </ul>
+        <p class="mono" style="font-size:9px;color:#6f664f;margin-top:6px">Бросок нужен там, где есть риск, цена или неопределённость.</p>
+      </div>
+      <div class="screen-card">
+        <h3>Сложность навыка</h3>
+        <table class="tbl compact">
+          <thead><tr><th>Шанс</th><th>Кто так умеет</th></tr></thead>
+          <tbody>
+            <tr><td class="num">20%</td><td>Небольшая тренировка, любитель</td></tr>
+            <tr><td class="num">30%</td><td>Начальная подготовка, выпускник колледжа</td></tr>
+            <tr><td class="num">40%</td><td>Годы опыта или профильная специальность</td></tr>
+            <tr><td class="num">60%</td><td>Многолетний опыт, учёная степень</td></tr>
+            <tr><td class="num">80%</td><td>Дело всей жизни, лучший в регионе</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="screen-card">
+        <h3>Сложность характеристики</h3>
+        <table class="tbl compact">
+          <thead><tr><th>Значение</th><th>Кто справится</th></tr></thead>
+          <tbody>
+            <tr><td class="num">3–4</td><td>Любой мог бы</td></tr>
+            <tr><td class="num">5–8</td><td>Почти каждый</td></tr>
+            <tr><td class="num">9–12</td><td>Обычный человек</td></tr>
+            <tr><td class="num">13–16</td><td>Только незаурядный</td></tr>
+            <tr><td class="num">17–18</td><td>Гений или предел человеческого</td></tr>
+          </tbody>
+        </table>
+        <p class="mono" style="font-size:8px;color:#6f664f;margin-top:4px">Проверка характеристики = значение × 5.</p>
+      </div>
+      <div class="screen-card">
+        <h3>Результаты d100</h3>
+        <table class="tbl compact">
+          <thead><tr><th>Бросок</th><th>Результат</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">01</td><td><b>Критический успех</b> всегда</td></tr>
+            <tr><td class="mono">≤ навык</td><td>Успех; дубль (11, 22…) — критический</td></tr>
+            <tr><td class="mono">&gt; навык</td><td>Неудача; дубль (55, 66…) — провал</td></tr>
+            <tr><td class="mono">00</td><td><b>Критический провал</b> всегда</td></tr>
+          </tbody>
+        </table>
+        <p class="mono" style="font-size:8px;color:#6f664f;margin-top:4px">Крит: двойной эффект. Провал: осложнение, а не «ничего».</p>
+      </div>
+      <div class="screen-card">
+        <h3>Удача и пассивные шансы</h3>
+        <table class="tbl compact">
+          <tbody>
+            <tr><td>Бросок Удачи</td><td class="num">50%</td></tr>
+            <tr><td>ХАР × 5</td><td class="num">социальное давление</td></tr>
+            <tr><td>ИНТ × 5</td><td class="num">память, логика</td></tr>
+            <tr><td>ВОЛ × 5</td><td class="num">воля, сопротивление</td></tr>
+            <tr><td>ТЕЛ × 5</td><td class="num">выносливость, травма</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="screen-card">
+        <h3>Модификаторы</h3>
+        <table class="tbl compact">
+          <tbody>
+            <tr><td class="num">+20%</td><td>Благоприятно, помощь, прицеливание</td></tr>
+            <tr><td class="num">−20%</td><td>Стресс, спешка, плохие условия</td></tr>
+            <tr><td class="num">−40%</td><td>Крайне плохо, почти невозможно</td></tr>
+          </tbody>
+        </table>
+        <p class="mono" style="font-size:8px;color:#6f664f;margin-top:4px">Не складывайте десяток штрафов. Возьмите худший и добавьте один.</p>
+      </div>
+    </div>
+
+    <div class="screen-grid" style="margin-top:12px">
+      <div class="screen-card">
+        <h3>Базовые значения: бой и движение</h3>
+        <table class="tbl compact">
+          <tbody>
+            <tr><td>Атлетика</td><td class="num">30</td><td>Огнестрельное оружие</td><td class="num">20</td></tr>
+            <tr><td>Бдительность</td><td class="num">20</td><td>Оружие ближнего боя</td><td class="num">30</td></tr>
+            <tr><td>Вождение</td><td class="num">20</td><td>Пилотирование</td><td class="num">0</td></tr>
+            <tr><td>Верховая езда</td><td class="num">10</td><td>Плавание</td><td class="num">20</td></tr>
+            <tr><td>Навигация</td><td class="num">10</td><td>Подрывное дело</td><td class="num">0</td></tr>
+            <tr><td>Рукопашный бой</td><td class="num">40</td><td>Тяжёлое оружие</td><td class="num">0</td></tr>
+            <tr><td>Уклонение</td><td class="num">30</td><td>Артиллерия</td><td class="num">0</td></tr>
+          </tbody>
+        </table>
+        <p class="mono" style="font-size:8px;color:#6f664f;margin-top:4px">По Справочнику агента. В некоторых печатных ширмах Рукопашный бой 30% и Ремесло 10% — берите значение, записанное в листе.</p>
+      </div>
+      <div class="screen-card">
+        <h3>Базовые значения: расследование и социум</h3>
+        <table class="tbl compact">
+          <tbody>
+            <tr><td>Агентурная разведка</td><td class="num">10</td><td>Маскировка</td><td class="num">10</td></tr>
+            <tr><td>Бюрократия</td><td class="num">10</td><td>Поиск</td><td class="num">20</td></tr>
+            <tr><td>Выживание</td><td class="num">10</td><td>Скрытность</td><td class="num">10</td></tr>
+            <tr><td>Иностранный язык</td><td class="num">0</td><td>Убеждение</td><td class="num">20</td></tr>
+            <tr><td>Криминалистика</td><td class="num">0</td><td>Психотерапия</td><td class="num">10</td></tr>
+            <tr><td>Криминология</td><td class="num">10</td><td>Юриспруденция</td><td class="num">0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="screen-card">
+        <h3>Базовые значения: знания и техника</h3>
+        <table class="tbl compact">
+          <tbody>
+            <tr><td>Антропология</td><td class="num">0</td><td>Медицина</td><td class="num">0</td></tr>
+            <tr><td>Археология</td><td class="num">0</td><td>Наука</td><td class="num">0</td></tr>
+            <tr><td>Бухгалтерия</td><td class="num">10</td><td>Оккультизм</td><td class="num">10</td></tr>
+            <tr><td>Информатика</td><td class="num">0</td><td>Ремесло</td><td class="num">0</td></tr>
+            <tr><td>Искусство</td><td class="num">0</td><td>Тяжёлая техника</td><td class="num">10</td></tr>
+            <tr><td>История</td><td class="num">10</td><td>Фармацевтика</td><td class="num">0</td></tr>
+            <tr><td>Первая помощь</td><td class="num">10</td><td>Хирургия</td><td class="num">0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="screen-card">
+        <h3>Встречные проверки</h3>
+        <ol style="font-size:11px;padding-left:1.2em">
+          <li>Обе стороны бросают свой навык.</li>
+          <li>Побеждает <b>успешный</b> бросок с более высоким результатом.</li>
+          <li>Критический успех бьёт обычный успех.</li>
+          <li>Оба провалили — побеждает меньший бросок; при равенстве — ничья.</li>
+          <li>Ничья по результату — перебросьте или решите в пользу защищающегося.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabpanel" id="scr-combat">
+    <div class="screen-grid">
+      <div class="screen-card" style="grid-column:1/-1">
+        <h3>Действия в бою</h3>
+        <div class="table-wrap">
+          <table class="tbl compact">
+            <thead><tr><th>Действие</th><th>Эффект</th><th>Защита?</th></tr></thead>
+            <tbody>
+              <tr><td>Прицеливание</td><td>+20% к следующему броску атаки</td><td>Нет</td></tr>
+              <tr><td>Атака</td><td>Нанести урон</td><td>Ближний бой</td></tr>
+              <tr><td>Заказная атака</td><td>Игнорирует укрытие или броню, но −20% / −40% для сложного выстрела</td><td>Ближний бой</td></tr>
+              <tr><td>Разоружить</td><td>Цель роняет предмет; только безоружная атака</td><td>Ближний бой</td></tr>
+              <tr><td>Уклонение</td><td>Защищает от атаки</td><td>Да</td></tr>
+              <tr><td>Вырваться</td><td>Освободиться из захвата; СИЛ или рукопашный бой</td><td>Да</td></tr>
+              <tr><td>Дать отпор</td><td>Защита или контратака; СИЛ или рукопашный бой</td><td>Да</td></tr>
+              <tr><td>Движение</td><td>Шаг 10 м, бег 20 м, спринт 30 м</td><td>Нет</td></tr>
+              <tr><td>Захват</td><td>Держать цель; по захваченной ближняя атака +20%</td><td>Да</td></tr>
+              <tr><td>Ждать</td><td>Действовать после другого персонажа</td><td>Возможно</td></tr>
+              <tr><td>Что-то ещё</td><td>Любое действие, требующее мгновенной концентрации</td><td>Нет</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="screen-card" style="grid-column:1/-1">
+        <h3>Модификаторы боя</h3>
+        <div class="table-wrap">
+          <table class="tbl compact">
+            <thead><tr><th>Обстоятельство</th><th class="num">+20%</th><th class="num">−20%</th><th class="num">−40%</th></tr></thead>
+            <tbody>
+              <tr><td>Дистанция</td><td>Выстрел в упор (≤3 м)</td><td>За базовой дистанцией (до ×2)</td><td>Свыше ×2 (до ×5)</td></tr>
+              <tr><td>Видимость</td><td>Лазерный прицел</td><td>Дым, темнота</td><td>Почти нулевая видимость</td></tr>
+              <tr><td>Укрытие и размер</td><td>Взрывное оружие, атака по площади</td><td>Цель закрыта наполовину или меньше человека</td><td>Цель в основном закрыта или очень мала</td></tr>
+              <tr><td>Движение цели</td><td>Цель неподвижна</td><td>Цель лежит или бежит</td><td>Цель движется со скоростью автомобиля</td></tr>
+              <tr><td>Состояние атакующего</td><td>Тщательно прицеливался весь ход</td><td>Перец, электрошокер, измождение</td><td>Слезоточивый газ, светошумовая</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="screen-card">
+        <h3>Защита</h3>
+        <table class="tbl compact">
+          <thead><tr><th>Защита</th><th>Против Летальности</th><th>Против ОЗ</th></tr></thead>
+          <tbody>
+            <tr><td>Нательная броня</td><td>Без эффекта</td><td>Уменьшает урон</td></tr>
+            <tr><td>Укрытие</td><td>Автоматический провал</td><td>Уменьшает урон</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:10px;margin-top:5px">Уклонение не спасает от пули. Оно помогает добежать до укрытия, если оно есть в пределах 3 м.</p>
+      </div>
+      <div class="screen-card">
+        <h3>Бонус к урону от СИЛ</h3>
+        <table class="tbl compact">
+          <thead><tr><th>СИЛ</th><th>1–4</th><th>5–8</th><th>9–12</th><th>13–16</th><th>17–18</th></tr></thead>
+          <tbody><tr><td>Бонус</td><td class="num">−2</td><td class="num">−1</td><td class="num">0</td><td class="num">+1</td><td class="num">+2</td></tr></tbody>
+        </table>
+      </div>
+      <div class="screen-card">
+        <h3>Урон и состояние</h3>
+        <ul style="font-size:11px">
+          <li>Потеря ≥ ½ текущих ОЗ за атаку — <b>оглушение</b>; ТЕЛ×5 в начале хода, чтобы восстановиться.</li>
+          <li>1–2 ОЗ — проверка ТЕЛ×5, иначе <b>постоянная травма</b>.</li>
+          <li>0 ОЗ — смерть, если куратор не решит иначе. ОЗ не уходят ниже 0.</li>
+        </ul>
+      </div>
+      <div class="screen-card">
+        <h3>Смертельность</h3>
+        <p style="font-size:11px">Рейтинг Летальности — вероятность сразу снизить ОЗ цели до 0. Бросок d100 ≤ рейтинг: цель уничтожена. Провал: урон = сумма двух d10.</p>
+        <p style="font-size:11px">Существо крупнее человека Летальностью не убивается: получает урон, равный рейтингу.</p>
+        <p class="mono" style="font-size:8px;color:#6f664f">Летальность отменяет только укрытие (автопровал). Броня успешный бросок не отменяет — она снижает урон при провале.</p>
+      </div>
+      <div class="screen-card">
+        <h3>Радиус поражения</h3>
+        <ul style="font-size:11px">
+          <li>+20% к попаданию, если это взрыв.</li>
+          <li>Попадание: проверка Летальности для всех в радиусе.</li>
+          <li>Выжившие и промахнувшиеся — <b>подавлены</b>.</li>
+          <li>Подавление: спрятаться или упасть ничком следующим действием, иначе −1 ОР (если нет адаптации к насилию).</li>
+        </ul>
+      </div>
+      <div class="screen-card">
+        <h3>Быстрый бросок</h3>
+        <p style="font-size:11px">Атака 60%, урон 1D10:</p>
+        <p><button class="roll" data-roll="1D100" data-target="60" data-label="Атака 60%">атака</button>
+        <button class="roll" data-roll="1D10" data-label="Урон 1D10">урон</button>
+        <button class="roll" data-san="0/1D6" data-label="Потеря рассудка">SAN 0/1D6</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabpanel" id="scr-sanity">
+    <div class="screen-grid">
+      <div class="screen-card">
+        <h3>Как уменьшить потерю ОР</h3>
+        <ul style="font-size:11px">
+          <li><b>Адаптация к насилию</b> — автоматический успех проверки для насилия.</li>
+          <li><b>Адаптация к беспомощности</b> — автоматический успех для беспомощности.</li>
+          <li><b>Проецирующая травма</b> — потратить 1D4 ОВ и уменьшить потерю ОР и значение одной Связи на это число.</li>
+        </ul>
+      </div>
+      <div class="screen-card">
+        <h3>Как сойти с ума</h3>
+        <ul style="font-size:11px">
+          <li><b>Временное помешательство</b> — потерять 5+ ОР за один раз: бей, беги или замри.</li>
+          <li><b>Новое расстройство</b> — ОР упали до Точки Надлома.</li>
+          <li><b>0 ОР</b> — агент становится НПС.</li>
+        </ul>
+        <h3 style="margin-top:8px">Как подавить</h3>
+        <p style="font-size:11px">Уменьшить ОВ и Связь на 1D4 и пройти проверку ОР. Успех подавляет помешательство или расстройство на сцену.</p>
+      </div>
+      <div class="screen-card">
+        <h3>Потери: насилие</h3>
+        <table class="tbl compact">
+          <tbody>
+            <tr><td>Засада или обстрел</td><td class="num">0/1</td></tr>
+            <tr><td>Найти труп или изувеченную тушу</td><td class="num">0/1</td></tr>
+            <tr><td>Труп ребёнка или близкого</td><td class="num">0/1D4</td></tr>
+            <tr><td>Ранение, удушение</td><td class="num">0/1D4</td></tr>
+            <tr><td>Серьёзная травма, огонь</td><td class="num">0/1D6</td></tr>
+            <tr><td>Осталось 2 ОЗ или меньше</td><td class="num">0/1D6</td></tr>
+            <tr><td>Пытки</td><td class="num">0/1D8</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="screen-card">
+        <h3>Потери: причинение насилия</h3>
+        <table class="tbl compact">
+          <tbody>
+            <tr><td>Серьёзно навредить невиновному</td><td class="num">0/1D4</td></tr>
+            <tr><td>Сжечь тело товарища</td><td class="num">0/1D4</td></tr>
+            <tr><td>Убить, защищая себя</td><td class="num">0/1D4</td></tr>
+            <tr><td>Хладнокровно убить противника</td><td class="num">0/1D6</td></tr>
+            <tr><td>Пытать жертву</td><td class="num">0/1D8</td></tr>
+            <tr><td>Случайно убить невиновного</td><td class="num">0/1D8</td></tr>
+            <tr><td>Хладнокровно убивать невинных</td><td class="num">1/1D10</td></tr>
+          </tbody>
+        </table>
+        <p class="mono" style="font-size:8px;color:#6f664f">При провале +1 за каждую жертву после первой (до максимума кубика).</p>
+      </div>
+      <div class="screen-card">
+        <h3>Потери: паранормальное</h3>
+        <table class="tbl compact">
+          <tbody>
+            <tr><td>Терапия жертвы паранормального</td><td class="num">0/1</td></tr>
+            <tr><td>Безопасное проявление</td><td class="num">0/1</td></tr>
+            <tr><td>Жестокое проявление</td><td class="num">0/1D6</td></tr>
+            <tr><td>Видеть, как ходит труп</td><td class="num">0/1D6</td></tr>
+            <tr><td>Подвергнуться воздействию</td><td class="num">0/1D6</td></tr>
+            <tr><td>Жестокое нападение</td><td class="num">1/1D8+</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="screen-card">
+        <h3>Потери: беспомощность</h3>
+        <table class="tbl compact">
+          <tbody>
+            <tr><td>Уволен, почти разорён</td><td class="num">0/1</td></tr>
+            <tr><td>Связь уменьшена до 0</td><td class="num">0/1D4</td></tr>
+            <tr><td>Приговор, паралич, слепота</td><td class="num">0/1D4</td></tr>
+            <tr><td>Останки друга</td><td class="num">0/1D4</td></tr>
+            <tr><td>Связь сошла с ума</td><td class="num">1/1D4</td></tr>
+            <tr><td>Убийство друга на глазах</td><td class="num">0/1D6</td></tr>
+            <tr><td>Узнать, что Связь убили</td><td class="num">1/1D6</td></tr>
+            <tr><td>Видеть убийство Связи</td><td class="num">1/1D8</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="screen-card">
+        <h3>Временное помешательство</h3>
+        <table class="tbl compact">
+          <tbody>
+            <tr><td><b>Бежать</b></td><td>Бежать как можно дальше; если побег равен ТЕЛ — истощение</td></tr>
+            <tr><td><b>Драться</b></td><td>Беспорядочное нападение на ближайшую угрозу</td></tr>
+            <tr><td><b>Ступор</b></td><td>Паралич или потеря сознания; возможна амнезия; ТЕЛ×5, чтобы запомнить</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="screen-card">
+        <h3>ОВ, истощение, сон</h3>
+        <table class="tbl compact">
+          <tbody>
+            <tr><td>1–2 ОВ</td><td>−20% ко всем действиям</td></tr>
+            <tr><td>0 ОВ</td><td>Недееспособен; все проверки провалены</td></tr>
+            <tr><td>Ночь сна</td><td>+1D6 ОВ, снимает истощение</td></tr>
+            <tr><td>Мотивация</td><td>+1 ОВ, если куратор согласен</td></tr>
+            <tr><td>Истощение</td><td>−10…−20%, −1D6 ОВ</td></tr>
+            <tr><td>Бессонница</td><td>Проверка ОР, чтобы проспать</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="screen-card" style="margin-top:12px">
+      <h3>Расстройства</h3>
+      <div class="table-wrap tall">
+        <table class="tbl compact">
+          <thead><tr><th>Расстройство</th><th>Причина</th><th>Проявление</th></tr></thead>
+          <tbody>
+            <tr><td>Зависимость</td><td>Н, Б</td><td>−20% ко всем проверкам, если день прошёл без дозы</td></tr>
+            <tr><td>Амнезия</td><td>П</td><td>Событие забыто, пока не найден способ вернуть память</td></tr>
+            <tr><td>Деперсонализация</td><td>П</td><td>Отстранённость от себя; −20% ко всем проверкам</td></tr>
+            <tr><td>Депрессия</td><td>Н, Б, П</td><td>−20% ко всем проверкам при обострении</td></tr>
+            <tr><td>Диссоциативное расстройство</td><td>Б, П</td><td>Другая личность; чем дальше, тем больше личностей</td></tr>
+            <tr><td>Конверсионное расстройство</td><td>Б</td><td>Слепота, глухота или паралич</td></tr>
+            <tr><td>Лигирофобия</td><td>Н</td><td>Громкие звуки: паника, бегство или ступор</td></tr>
+            <tr><td>Мания величия</td><td>П</td><td>Невозможно взаимодействовать; сомнение вызывает ярость</td></tr>
+            <tr><td>Нарушение сна</td><td>Н, П</td><td>Проверка ОР, чтобы уснуть</td></tr>
+            <tr><td>ОКР</td><td>Б</td><td>−20%, если нельзя контролировать «важные» объекты</td></tr>
+            <tr><td>Одержимость</td><td>Б</td><td>−20%, если действие занимает 2+ дней</td></tr>
+            <tr><td>Паранойя</td><td>Н, П</td><td>Подозревает всех в заговоре</td></tr>
+            <tr><td>Вспыльчивость</td><td>Н</td><td>Безудержная ярость при обострении</td></tr>
+            <tr><td>Помутнение</td><td>П</td><td>Кататония, бесцельное блуждание</td></tr>
+            <tr><td>ПТСР</td><td>Н</td><td>Ярость или депрессия; −20%</td></tr>
+            <tr><td>Тотемическое принуждение</td><td>Н</td><td>Зацикленность на объекте; утрата — недееспособность</td></tr>
+            <tr><td>Тревожное расстройство</td><td>Б</td><td>−20% при обострении</td></tr>
+            <tr><td>Фобия</td><td>Б</td><td>Бегство или ступор при триггере</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mono" style="font-size:8px;color:#6f664f;margin-top:5px">Причины: Н — насилие, Б — беспомощность, П — паранормальное.</p>
+    </div>
+  </div>
+
+  <div class="tabpanel" id="scr-hazards">
+    <div class="screen-grid">
+      <div class="screen-card" style="grid-column:1/-1">
+        <h3>Яды</h3>
+        <div class="table-wrap">
+          <table class="tbl compact">
+            <thead><tr><th>Яд</th><th>Путь</th><th>Скорость</th><th class="num">Летальность</th><th>Симптомы</th><th>Антидот</th></tr></thead>
+            <tbody>
+              <tr><td>Яд паука</td><td>Укус</td><td>1D6 ч</td><td class="num">5%</td><td>Боль, озноб, тошнота, некроз</td><td>Да</td></tr>
+              <tr><td>Опасный препарат</td><td>Инъекция</td><td>1D6 ч</td><td class="num">5%</td><td>Боль, диарея, судороги, удушье</td><td>Да</td></tr>
+              <tr><td>Мышьяк</td><td>Проглатывание</td><td>1D6 ч</td><td class="num">10%</td><td>Боль, слабость, судороги</td><td>Нет</td></tr>
+              <tr><td>Яд змеи или скорпиона</td><td>Укус</td><td>1D6 ч</td><td class="num">10%</td><td>Боль, кровотечение, судороги</td><td>Да</td></tr>
+              <tr><td>Фосген</td><td>Вдыхание</td><td>2D6 ч</td><td class="num">15%</td><td>Волдыри, кровавый кашель, удушье</td><td>Нет</td></tr>
+              <tr><td>Цианистый водород</td><td>Вдыхание</td><td>1D6 ход.</td><td class="num">20%</td><td>Удушье</td><td>Да</td></tr>
+              <tr><td>Зарин</td><td>Вдыхание, кожа</td><td>2D6 ход.</td><td class="num">20%</td><td>Спазмы, судороги, удушье</td><td>Да</td></tr>
+              <tr><td>Рицин</td><td>Инъекция, порошок</td><td>2D6 ход.</td><td class="num">20%</td><td>Шок, судороги, недостаточность</td><td>Нет</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mono" style="font-size:8px;color:#6f664f">Провал Летальности: ТЕЛ×5, чтобы вдвое уменьшить урон. Госпитализация: +20% к ТЕЛ. Крит. успех — 1 урон, крит. провал — двойной.</p>
+      </div>
+      <div class="screen-card" style="grid-column:1/-1">
+        <h3>Болезни</h3>
+        <div class="table-wrap">
+          <table class="tbl compact">
+            <thead><tr><th>Болезнь</th><th>Заражение</th><th>Скорость</th><th class="num">Штраф</th><th>Урон</th><th>Лечение</th></tr></thead>
+            <tbody>
+              <tr><td>Бактериальный менингит</td><td>Воздух</td><td>1D6 дн.</td><td class="num">−40</td><td>1D4</td><td>Антибиотики</td></tr>
+              <tr><td>Пневмония</td><td>Воздух</td><td>1D6 дн.</td><td class="num">—</td><td>1D6</td><td>Антибиотики</td></tr>
+              <tr><td>Гангрена</td><td>Грязные раны</td><td>1D6 дн.</td><td class="num">−20</td><td>1D4</td><td>Антибиотики</td></tr>
+              <tr><td>Чума</td><td>Блохи, воздух</td><td>1D6 дн.</td><td class="num">—</td><td>1D6</td><td>Антибиотики</td></tr>
+              <tr><td>ВИЧ/СПИД</td><td>Кровь, секс</td><td>1D6 мес.</td><td class="num">—</td><td>1D6</td><td>Нет; терапия</td></tr>
+              <tr><td>Эбола</td><td>Кровь, тела</td><td>1D6 дн.</td><td class="num">−40</td><td>1D6</td><td>Нет</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mono" style="font-size:8px;color:#6f664f">ТЕЛ×5, чтобы вдвое уменьшить урон и выздороветь. Госпитализация +20%.</p>
+      </div>
+      <div class="screen-card">
+        <h3>Огонь</h3>
+        <table class="tbl compact">
+          <thead><tr><th>Интенсивность</th><th>Пример</th><th>Урон</th></tr></thead>
+          <tbody>
+            <tr><td>Незначительный</td><td>Свеча</td><td>1 / ход</td></tr>
+            <tr><td>Умеренный</td><td>Клеймо, вспышка</td><td>1D6 / ход</td></tr>
+            <tr><td>Большой</td><td>Костёр</td><td>2D6 / ход</td></tr>
+            <tr><td>Масштабный</td><td>Пожар, печь</td><td>Летальность 10% / ход</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:10px">ЛОВ×5 или загореться; горящий получает половину урона каждый ход.</p>
+      </div>
+      <div class="screen-card">
+        <h3>Холод</h3>
+        <ul style="font-size:11px">
+          <li>Подготовлен: ТЕЛ часов.</li>
+          <li>Средне: ТЕЛ×5 минут.</li>
+          <li>Без подготовки: ТЕЛ минут.</li>
+          <li>Далее ТЕЛ×5 в минуту; каждый провал — −1 ТЕЛ.</li>
+          <li>Потом 1D8 / 5 минут и невозможность двигаться.</li>
+          <li>В тепле +1 ТЕЛ в минуту.</li>
+        </ul>
+      </div>
+      <div class="screen-card">
+        <h3>Падение</h3>
+        <table class="tbl compact">
+          <tbody>
+            <tr><td>1–3 м</td><td>1D6; 2D6 при неконтролируемом</td></tr>
+            <tr><td>&gt;3 м</td><td>1% Летальности за метр</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="screen-card">
+        <h3>Столкновение</h3>
+        <p style="font-size:11px">Летальность 10% за каждые 40 км/ч; вдвое — при ударе о стену. Выживший: ТЕЛ×5 или оглушён.</p>
+        <h3 style="margin-top:8px">Удушье</h3>
+        <p style="font-size:11px">С вдохом — ТЕЛ×5 ходов. Далее каждый ход ТЕЛ×5: успех −1 ОЗ, провал −1D6.</p>
+      </div>
+      <div class="screen-card">
+        <h3>Быстрые проверки</h3>
+        <p><button class="roll" data-roll="1D100" data-target="50" data-label="ТЕЛ×5 (ТЕЛ 10)">ТЕЛ×5</button>
+        <button class="roll" data-roll="1D100" data-target="40" data-label="ЛОВ×5 (ЛОВ 8)">ЛОВ×5</button>
+        <button class="roll" data-roll="1D6" data-label="Урон от огня">1D6</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tabpanel" id="scr-ref">
+    <div class="screen-grid">
+      <div class="screen-card">
+        <h3>Один взгляд: проверка</h3>
+        <ol style="font-size:11px;padding-left:1.2em">
+          <li>Есть риск и неопределённость? Нет — просто опишите результат.</li>
+          <li>Какой навык? Если нет — характеристика ×5.</li>
+          <li>Шанс 20 / 30 / 40 / 60 / 80.</li>
+          <li>Модификатор: +20, −20, −40.</li>
+          <li>d100 ≤ итог. Дубль — крит или провал.</li>
+          <li>Опишите <b>что изменилось</b>, а не только «получилось».</li>
+        </ol>
+      </div>
+      <div class="screen-card">
+        <h3>Один взгляд: бой</h3>
+        <ol style="font-size:11px;padding-left:1.2em">
+          <li>Инициатива по ЛОВ.</li>
+          <li>Одно действие за ход.</li>
+          <li>Атака: d100 ≤ навык + модификаторы.</li>
+          <li>Защита: Уклонение / рукопашный бой, если агент ждал.</li>
+          <li>Урон: кубик + бонус СИЛ − броня.</li>
+          <li>Летальность: d100 ≤ рейтинг = смерть.</li>
+          <li>2 ОЗ — без сознания; 0 — смерть.</li>
+        </ol>
+      </div>
+      <div class="screen-card">
+        <h3>Один взгляд: рассудок</h3>
+        <ol style="font-size:11px;padding-left:1.2em">
+          <li>Событие: насилие / беспомощность / паранормальное.</li>
+          <li>Потеря: 0/1, 0/1D6, 1/1D8 и т.п.</li>
+          <li>d100 ≤ текущий ОР — успех.</li>
+          <li>Вычтите потерю; при 5+ за раз — временное помешательство.</li>
+          <li>Дошли до ТН — новое расстройство.</li>
+          <li>0 ОР — персонаж потерян.</li>
+        </ol>
+      </div>
+      <div class="screen-card">
+        <h3>Типовые NPC (быстро)</h3>
+        <table class="tbl compact">
+          <thead><tr><th>Кто</th><th>ОЗ</th><th>Огнестрел</th><th>Урон</th></tr></thead>
+          <tbody>
+            <tr><td>Гражданский</td><td class="num">10</td><td class="num">20%</td><td>1D10</td></tr>
+            <tr><td>Полицейский</td><td class="num">12</td><td class="num">50%</td><td>1D10</td></tr>
+            <tr><td>Агент ФБР</td><td class="num">12</td><td class="num">60%</td><td>1D10</td></tr>
+            <tr><td>Солдат</td><td class="num">13</td><td class="num">60%</td><td>1D12</td></tr>
+            <tr><td>Культист</td><td class="num">11</td><td class="num">30%</td><td>1D4/1D10</td></tr>
+          </tbody>
+        </table>
+        <p class="mono" style="font-size:8px;color:#6f664f">Для точных статблоков — бестиарий.</p>
+      </div>
+      <div class="screen-card">
+        <h3>Сложности на скорую руку</h3>
+        <table class="tbl compact">
+          <tbody>
+            <tr><td>Легко</td><td class="num">+20%</td></tr>
+            <tr><td>Обычно</td><td class="num">0</td></tr>
+            <tr><td>Сложно</td><td class="num">−20%</td></tr>
+            <tr><td>Очень сложно</td><td class="num">−40%</td></tr>
+            <tr><td>Почти невозможно</td><td class="num">−60%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="screen-card">
+        <h3>Что сказать вместо «ничего»</h3>
+        <ul style="font-size:11px">
+          <li>«Ты справляешься, но теряешь время».</li>
+          <li>«Получается, но остаётся след».</li>
+          <li>«Ты видишь больше, чем хотел».</li>
+          <li>«Кто-то замечает это».</li>
+          <li>«Уходит ресурс: патроны, ОВ, доверие».</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="callout note" style="margin-top:20px">
+  <span class="callout-t">Печать</span>
+  <p>Кнопка печати в верхней панели убирает интерфейс и оставляет таблицы. Для ширмы лучше печать в двух колонках: браузер сделает это сам при A4 и книжной ориентации.</p>
+</div>

@@ -1,0 +1,104 @@
+/* Официальный бланк листа персонажа (2 страницы) */
+.official-print { display: none; }
+
+.os-page {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+.os-page1 { aspect-ratio: 1829 / 2292; }
+.os-page2 { aspect-ratio: 1828 / 2294; }
+
+.os-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 0;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.os-layer { position: absolute; inset: 0; z-index: 1; }
+
+.os-field {
+  position: absolute;
+  z-index: 2;
+  font-family: "Courier New", "JetBrains Mono", monospace;
+  font-size: 6.2pt;
+  line-height: 1.2;
+  color: #111;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.os-field.lead { font-size: 5.9pt; line-height: 1.05; font-weight: 600; letter-spacing: .01em; }
+.os-field.small { font-size: 6pt; line-height: 1.35; }
+.os-field.tiny { font-size: 5.4pt; line-height: 1.2; }
+.os-field.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 6.6pt;
+  font-weight: 700;
+}
+
+/* Скрытый макет для рендера PDF */
+.pdf-render {
+  position: fixed;
+  left: -12000px;
+  top: 0;
+  width: 794px;
+  background: #fff;
+  z-index: 0;
+}
+.pdf-render .official-print { display: block !important; }
+.pdf-render .os-page { width: 794px; height: auto; margin: 0; }
+.pdf-render .os-page1 { height: 995px; }
+.pdf-render .os-page2 { height: 996px; }
+
+.os-mark {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 6.2pt;
+  line-height: 1;
+  color: #111;
+}
+
+@media print {
+  @page { size: A4 portrait; margin: 6mm; }
+
+  body.printing-official { background: #fff !important; }
+  body.printing-official > * { display: none !important; }
+  body.printing-official #official-print {
+    display: block !important;
+    position: static !important;
+  }
+
+  .official-print {
+    display: block !important;
+    width: 198mm;
+    margin: 0;
+    padding: 0;
+  }
+  .os-page {
+    width: 198mm;
+    height: auto;
+    margin: 0;
+    break-after: page;
+    page-break-after: always;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .os-page1 { height: calc(198mm * 2292 / 1829); }
+  .os-page2 { height: calc(198mm * 2294 / 1828); }
+  .os-page:last-child { break-after: auto; page-break-after: auto; }
+
+  .os-bg { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
